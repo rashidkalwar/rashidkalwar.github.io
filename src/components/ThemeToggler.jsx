@@ -4,15 +4,25 @@ import { ActionIcon, useMantineColorScheme } from "@mantine/core";
 import { IconSun, IconMoonStars } from "@tabler/icons";
 
 function ThemeToggler() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  console.log(colorScheme);
+
+  const [mounted, setMounted] = useState(false);
   const dark = colorScheme === "dark";
+
+  useEffect(() => {
+    setMounted(true);
+    setTheme(dark);
+  }, []);
+  if (!mounted) return null;
 
   return (
     <ActionIcon
-      variant="outline"
-      color={dark ? "indigo" : "blue"}
+      variant="default"
+      className="text-gray-700 dark:text-gray-300"
+      size="lg"
+      radius="xl"
+      color={dark ? "gray" : "dark"}
       onClick={() => {
         setTheme(dark ? "light" : "dark");
         toggleColorScheme();

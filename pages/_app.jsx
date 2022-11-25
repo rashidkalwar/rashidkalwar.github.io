@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import { useState } from "react";
 import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
@@ -9,12 +8,13 @@ export default function App(props) {
   const { Component, pageProps } = props;
 
   const [colorScheme, setColorScheme] = useLocalStorage({
-    key: "theme",
-    // defaultValue: "light",
+    key: "mantine-theme",
+    defaultValue: "light",
     getInitialValueInEffect: true,
   });
   const toggleColorScheme = (value) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
+  console.log(colorScheme);
 
   return (
     <>
