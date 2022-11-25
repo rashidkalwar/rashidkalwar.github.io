@@ -201,6 +201,11 @@
   dependencies:
     "@floating-ui/dom" "^1.0.5"
 
+"@fontsource/cookie@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/cookie/-/cookie-4.5.9.tgz#8baeaf515e4d95e7280d3ce1b417eef0b2a9df7b"
+  integrity sha512-A79A+/q84p2GqS9RLXBB7DKah8OCCwI5CL76z8GGjsPmd2w0x6Xx2UUjkqKvxn32Bs44ppVrdL0BIyJqNnmGaw==
+
 "@mantine/core@^5.8.3":
   version "5.8.3"
   resolved "https://registry.npmjs.org/@mantine/core/-/core-5.8.3.tgz"

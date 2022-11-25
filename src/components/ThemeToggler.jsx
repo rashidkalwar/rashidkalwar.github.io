@@ -19,8 +19,8 @@ function ThemeToggler() {
   return (
     <ActionIcon
       variant="default"
-      className="text-gray-700 dark:text-gray-300"
-      size="lg"
+      className="text-slate-700 dark:text-slate-300 ml-1"
+      size="md"
       radius="xl"
       color={dark ? "gray" : "dark"}
       onClick={() => {
@@ -29,7 +29,7 @@ function ThemeToggler() {
       }}
       title="Toggle color scheme"
     >
-      {dark ? <IconSun size={18} /> : <IconMoonStars size={18} />}
+      {dark ? <IconSun size={16} /> : <IconMoonStars size={16} />}
     </ActionIcon>
   );
 }

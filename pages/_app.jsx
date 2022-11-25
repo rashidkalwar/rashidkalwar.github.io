@@ -14,7 +14,6 @@ export default function App(props) {
   });
   const toggleColorScheme = (value) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
-  console.log(colorScheme);
 
   return (
     <>

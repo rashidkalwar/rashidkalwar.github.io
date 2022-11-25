@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ThemeToggler from "../src/components/ThemeToggler";
+import Navbar from "../src/components/Navbar";
 
 export default function Home() {
   return (
@@ -10,9 +10,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-screen w-screen flex justify-center items-center">
-        <ThemeToggler />
-      </main>
+      {/* <main className="h-screen w-screen flex justify-center items-center"> */}
+      {/* <ThemeToggler /> */}
+
+      {/* <Signature className="w-44 fill-slate-800" /> */}
+      {/* </main> */}
+      <Navbar />
 
       <footer></footer>
     </div>

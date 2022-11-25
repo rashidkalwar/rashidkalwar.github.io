@@ -7,6 +7,9 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      logo: ["cookie"],
+    },
     extend: {},
   },
   plugins: [],
