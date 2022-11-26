@@ -1,5 +1,4 @@
-import "@fontsource/cookie";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   createStyles,
   Header,
@@ -7,6 +6,8 @@ import {
   ActionIcon,
   Container,
   Burger,
+  Paper,
+  Transition,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
@@ -15,9 +16,35 @@ import {
   IconBrandGithub,
 } from "@tabler/icons";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import ThemeToggler from "./ThemeToggler";
 
 const useStyles = createStyles((theme) => ({
+  root: {
+    position: "relative",
+    zIndex: 1,
+  },
+
+  dropdown: {
+    position: "absolute",
+    top: 60,
+    left: 0,
+    right: 0,
+    zIndex: 0,
+    borderTopRightRadius: 0,
+    borderTopLeftRadius: 0,
+    borderTopWidth: 0,
+    overflow: "hidden",
+
+    [theme.fn.largerThan("sm")]: {
+      display: "none",
+    },
+  },
+
+  outer: {
+    backgroundColor: theme.colorScheme === "dark" ? "#1A1B1E" : "#fff",
+  },
+
   inner: {
     display: "flex",
     justifyContent: "space-between",
@@ -26,7 +53,11 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("sm")]: {
       justifyContent: "flex-start",
+      marginTop: 0,
     },
+
+    transition: "ease-in-out",
+    transitionDuration: "0.7s",
   },
 
   links: {
@@ -58,12 +89,16 @@ const useStyles = createStyles((theme) => ({
     display: "block",
     lineHeight: 1,
     padding: "8px 12px",
-    borderRadius: theme.radius.sm,
+
+    [theme.fn.largerThan("sm")]: {
+      borderRadius: theme.radius.lg,
+    },
+
     textDecoration: "none",
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
+    // color:
+    //   theme.colorScheme === "dark"
+    //     ? theme.colors.dark[0]
+    //     : theme.colors.gray[7],
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
@@ -77,37 +112,59 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     "&, &:hover": {
-      backgroundColor: theme.fn.variant({
-        variant: "light",
-        color: theme.primaryColor,
-      }).background,
-      color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-        .color,
+      // backgroundColor: theme.fn.variant({
+      //   variant: "light",
+      //   color: theme.colors.gray[5],
+      // }).background,
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[5]
+          : theme.colors.gray[2],
+      // color: theme.fn.variant({ variant: "light", color: theme.colors.gray[7] })
+      //   .color,
+      // color:
+      //   theme.colorScheme === "dark"
+      //     ? theme.colors.dark[0]
+      //     : theme.colors.gray[8],
     },
   },
 }));
 
 const links = [
   { link: "/", label: "Home" },
-  { link: "/#", label: "About" },
-  { link: "/News", label: "News" },
+  { link: "/#", label: "Portfolio" },
+  { link: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
+  const [extended, setExtended] = useState(true);
   const { classes, cx } = useStyles();
+  const router = useRouter();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 5) {
+        setExtended(false);
+      } else {
+        setExtended(true);
+      }
+    });
+  }, []);
 
   const items = links.map((link) => (
     <Link
       key={link.label}
       href={link.link}
-      className={cx(classes.link, {
+      className={`${cx(classes.link, {
         [classes.linkActive]: active === link.link,
-      })}
+      })} text-gray-700 dark:text-gray-300`}
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
+        close();
+        // router.push(link.link);
       }}
     >
       {link.label}
@@ -115,51 +172,65 @@ export default function Navbar() {
   ));
 
   return (
-    <Header height={56} mb={120}>
-      <Container className={classes.inner}>
-        <Burger
-          opened={opened}
-          onClick={toggle}
-          size="sm"
-          className={classes.burger}
-        />
-        <Group className={classes.links} spacing={5}>
-          {items}
-        </Group>
+    <div className={`fixed w-full h-14 ${classes.outer}`}>
+      <Header height={56} className={classes.root}>
+        <Container
+          className={classes.inner}
+          style={{ marginTop: extended ? 30 : 0 }}
+        >
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            size="sm"
+            className={classes.burger}
+          />
+          <Group className={`${classes.links} w-max`} spacing={5}>
+            {items}
+          </Group>
 
-        <h1 className="font-logo font-light text-3xl md:text-4xl text-slate-700 dark:text-slate-100">
-          Rashid Ali
-        </h1>
+          <Link href="/">
+            <h1 className="font-logo font-light text-[25px] sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-100">
+              Rashid Ali
+            </h1>
+          </Link>
 
-        <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon
-            className="text-slate-700 dark:text-slate-300 mx-1"
-            size="md"
-            radius="xl"
-            variant="default"
-          >
-            <IconBrandTwitter size={17} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon
-            className="text-slate-700 dark:text-slate-300 mx-1"
-            size="md"
-            radius="xl"
-            variant="default"
-          >
-            <IconBrandGithub size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon
-            className="text-slate-700 dark:text-slate-300 mx-1"
-            size="md"
-            radius="xl"
-            variant="default"
-          >
-            <IconBrandLinkedin size={19} stroke={1.5} />
-          </ActionIcon>
+          <Group spacing={0} className={classes.social} position="right" noWrap>
+            <ActionIcon
+              className="text-gray-700 dark:text-gray-300 mx-1"
+              size="md"
+              radius="xl"
+              variant="default"
+            >
+              <IconBrandTwitter size={17} stroke={1.5} />
+            </ActionIcon>
+            <ActionIcon
+              className="text-gray-700 dark:text-gray-300 mx-1"
+              size="md"
+              radius="xl"
+              variant="default"
+            >
+              <IconBrandGithub size={18} stroke={1.5} />
+            </ActionIcon>
+            <ActionIcon
+              className="text-gray-700 dark:text-gray-300 mx-1"
+              size="md"
+              radius="xl"
+              variant="default"
+            >
+              <IconBrandLinkedin size={19} stroke={1.5} />
+            </ActionIcon>
+            <ThemeToggler />
+          </Group>
 
-          <ThemeToggler />
-        </Group>
-      </Container>
-    </Header>
+          <Transition transition="slide-right" duration={200} mounted={opened}>
+            {(styles) => (
+              <Paper className={classes.dropdown} withBorder style={styles}>
+                {items}
+              </Paper>
+            )}
+          </Transition>
+        </Container>
+      </Header>
+    </div>
   );
 }

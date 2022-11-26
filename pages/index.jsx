@@ -10,13 +10,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <main className="h-screen w-screen flex justify-center items-center"> */}
-      {/* <ThemeToggler /> */}
-
-      {/* <Signature className="w-44 fill-slate-800" /> */}
-      {/* </main> */}
       <Navbar />
-
+      <main className="bg-white dark:bg-transparent h-screen"></main>
+      <section className="bg-white dark:bg-transparent h-screen"></section>
       <footer></footer>
     </div>
   );

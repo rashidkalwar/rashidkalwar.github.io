@@ -32,9 +32,7 @@ export default function App(props) {
         <MantineProvider
           withGlobalStyles
           withNormalizeCSS
-          theme={{
-            colorScheme,
-          }}
+          theme={{ colorScheme }}
         >
           <ThemeProvider enableSystem={true} attribute="class">
             <Component {...pageProps} />
