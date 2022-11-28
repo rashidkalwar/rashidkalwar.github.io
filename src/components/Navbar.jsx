@@ -68,6 +68,13 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  logo: {
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.gray[1]
+        : theme.colors.gray[7],
+  },
+
   social: {
     width: 260,
 
@@ -189,7 +196,9 @@ export default function Navbar() {
           </Group>
 
           <Link href="/">
-            <h1 className="font-logo font-light text-[25px] sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-100">
+            <h1
+              className={`font-logo font-light text-[25px] sm:text-3xl md:text-4xl ${classes.logo}`}
+            >
               Rashid Ali
             </h1>
           </Link>
