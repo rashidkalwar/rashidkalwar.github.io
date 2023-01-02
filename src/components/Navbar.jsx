@@ -18,6 +18,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/router";
 import ThemeToggler from "./ThemeToggler";
+import { motion } from "framer-motion";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -101,13 +102,12 @@ const useStyles = createStyles((theme) => ({
       borderRadius: theme.radius.lg,
     },
 
-    textDecoration: "none",
+    // textDecoration: "none",
     // color:
     //   theme.colorScheme === "dark"
     //     ? theme.colors.dark[0]
     //     : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
+    // fontSize: theme.fontSizes.sm,
 
     "&:hover": {
       backgroundColor:
@@ -166,7 +166,7 @@ export default function Navbar() {
       href={link.link}
       className={`${cx(classes.link, {
         [classes.linkActive]: active === link.link,
-      })} text-gray-700 dark:text-gray-300`}
+      })} text-gray-700 dark:text-gray-300 font-semibold text-sm align-middle no-underline`}
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
@@ -179,7 +179,12 @@ export default function Navbar() {
   ));
 
   return (
-    <div className={`fixed w-full h-14 ${classes.outer}`}>
+    <motion.div
+      initial={{ opacity: 0.1, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.7 }}
+      className={`fixed w-full h-14 ${classes.outer}`}
+    >
       <Header height={56} className={classes.root}>
         <Container
           className={classes.inner}
@@ -240,6 +245,6 @@ export default function Navbar() {
           </Transition>
         </Container>
       </Header>
-    </div>
+    </motion.div>
   );
 }

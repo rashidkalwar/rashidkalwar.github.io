@@ -34,7 +34,11 @@ export default function App(props) {
           withNormalizeCSS
           theme={{ colorScheme }}
         >
-          <ThemeProvider enableSystem={true} attribute="class">
+          <ThemeProvider
+            enableSystem={true}
+            attribute="class"
+            defaultTheme="light"
+          >
             <Component {...pageProps} />
           </ThemeProvider>
         </MantineProvider>
