@@ -9,6 +9,8 @@ module.exports = {
   theme: {
     fontFamily: {
       logo: ["cookie"],
+      main: ["Inter"],
+      mono: ["Space Mono"],
     },
     extend: {},
   },

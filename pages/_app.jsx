@@ -32,7 +32,7 @@ export default function App(props) {
         <MantineProvider
           withGlobalStyles
           withNormalizeCSS
-          theme={{ colorScheme }}
+          theme={{ colorScheme, fontFamily: "Inter" }}
         >
           <ThemeProvider
             enableSystem={true}

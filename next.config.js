@@ -5,6 +5,7 @@ const nextConfig = {
   images: {
     loader: "akamai",
     path: "",
+    domains: ["images.unsplash.com"],
   },
   basePath: "",
   assetPrefix: "",
