@@ -26,7 +26,8 @@ function ThemeToggler() {
         setTheme(dark ? "light" : "dark");
         toggleColorScheme();
       }}
-      title="Toggle color scheme"
+      title="Toggle Theme"
+      aria-label="toggle-theme"
     >
       {dark ? <IconSun size={16} /> : <IconMoonStars size={16} />}
     </ActionIcon>
