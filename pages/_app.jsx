@@ -4,6 +4,11 @@ import { ThemeProvider } from "next-themes";
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
 import { useLocalStorage } from "@mantine/hooks";
 
+//fonts
+import "@fontsource/inter";
+import "@fontsource/cookie";
+import "@fontsource/space-mono";
+
 export default function App(props) {
   const { Component, pageProps } = props;
 
