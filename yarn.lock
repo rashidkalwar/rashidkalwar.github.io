@@ -201,6 +201,21 @@
   dependencies:
     "@floating-ui/dom" "^1.0.5"
 
+"@fontsource/cookie@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.npmjs.org/@fontsource/cookie/-/cookie-4.5.9.tgz"
+  integrity sha512-A79A+/q84p2GqS9RLXBB7DKah8OCCwI5CL76z8GGjsPmd2w0x6Xx2UUjkqKvxn32Bs44ppVrdL0BIyJqNnmGaw==
+
+"@fontsource/inter@^4.5.14":
+  version "4.5.15"
+  resolved "https://registry.npmjs.org/@fontsource/inter/-/inter-4.5.15.tgz"
+  integrity sha512-FzleM9AxZQK2nqsTDtBiY0PMEVWvnKnuu2i09+p6DHvrHsuucoV2j0tmw+kAT3L4hvsLdAIDv6MdGehsPIdT+Q==
+
+"@fontsource/space-mono@^4.5.12":
+  version "4.5.12"
+  resolved "https://registry.npmjs.org/@fontsource/space-mono/-/space-mono-4.5.12.tgz"
+  integrity sha512-/ljrJgSIB/C0jUCn07r/V/KpkdHF9bnK2fD0raGSVkgQjFqQ6Q3LndVeBiUCJlIi6ROh7rHDkpFzn+nNmRgRlQ==
+
 "@mantine/core@^5.8.3":
   version "5.8.3"
   resolved "https://registry.npmjs.org/@mantine/core/-/core-5.8.3.tgz"
@@ -1253,6 +1268,11 @@ react-dom@18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-icons@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.7.1.tgz"
+  integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
 
 react-is@^16.7.0:
   version "16.13.1"
