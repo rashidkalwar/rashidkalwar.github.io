@@ -76,8 +76,8 @@ function Experience() {
                   performance for a seamless user experience
                 </List.Item>
                 <List.Item>
-                  Implemented a responsive and clean design with optimized
-                  performance for a seamless user experience
+                  Utilized Git for version control and hosted the website on
+                  GitHub pages for accessibility
                 </List.Item>
               </List>
             </div>
@@ -126,8 +126,7 @@ function Experience() {
                 </List.Item>
                 <List.Item>
                   Applied data cleaning and cross-checking procedures to ensure
-                  accuracy and improve the quality of data sets used by the
-                  company.
+                  accuracy and quality of data sets.
                 </List.Item>
                 <List.Item>
                   Created comprehensive data frames and Excel files to

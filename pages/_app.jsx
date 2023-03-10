@@ -33,7 +33,11 @@ export default function App(props) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Rashid Ali</title>
+        <meta
+          name="description"
+          content="Rashid Ali is a software developer who specializes in building (and occasionally designing) exceptional digital experiences."
+        />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
