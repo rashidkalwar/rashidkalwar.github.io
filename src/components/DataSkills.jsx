@@ -38,11 +38,11 @@ const tabsContent = [
     bullets: [
       {
         id: 0,
-        text: 'This is some text that I wanted as bullet point in languages section.',
+        text: 'I have strong foundational knowledge in Python as my first language, with demonstrated ability to develop efficient and effective code.',
       },
       {
         id: 1,
-        text: 'On the other hand this is also a bullet point that I wanted to add.',
+        text: 'Proficient in JavaScript specially in MERN stack, with experience in developing and implementing complex applications for web development and beyond.',
       },
     ],
     icons: [
@@ -61,11 +61,7 @@ const tabsContent = [
     bullets: [
       {
         id: 0,
-        text: 'This is some text that I wanted as bullet point in languages section.',
-      },
-      {
-        id: 1,
-        text: 'On the other hand this is also a bullet point that I wanted to add.',
+        text: 'Over the course of several years, I have worked extensively with various frameworks and libraries, and I am particularly proficient in React.js, having leveraged it to develop numerous dynamic and responsive web applications.',
       },
     ],
     icons: [
@@ -86,11 +82,7 @@ const tabsContent = [
     bullets: [
       {
         id: 0,
-        text: 'This is some text that I wanted as bullet point in languages section.',
-      },
-      {
-        id: 1,
-        text: 'On the other hand this is also a bullet point that I wanted to add.',
+        text: 'Skilled in both SQL and NoSQL databases, able to design efficient data models, optimize queries, and integrate data from multiple sources, with expertise in SQL systems such as MySQL and PostgreSQL, and NoSQL databases like MongoDB.',
       },
     ],
     icons: [
@@ -107,11 +99,11 @@ const tabsContent = [
     bullets: [
       {
         id: 0,
-        text: 'This is some text that I wanted as bullet point in languages section.',
+        text: 'Familiar with Git version control system and experienced with cloud hosting platforms like Vercel and Netlify, with experience in deploying and managing web applications using modern front-end frameworks and libraries.',
       },
       {
         id: 1,
-        text: 'On the other hand this is also a bullet point that I wanted to add.',
+        text: 'Experienced in containerization technology, with experience using Docker to create portable development environments and deploy applications to production servers, and familiar with DevOps practices for automating software testing, deployment, and maintenance.',
       },
     ],
     icons: [

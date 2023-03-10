@@ -1,4 +1,4 @@
-import { Container, Tabs } from '@mantine/core';
+import { Container, Tabs, List } from '@mantine/core';
 import Link from 'next/link';
 import { IconTriangle } from '@tabler/icons';
 import { useState } from 'react';
@@ -65,24 +65,28 @@ export default function Skills() {
                 className=""
                 value={tab.name}
               >
-                <div className="text-sm py-2 px-8 min-h-[288px]">
+                <div className="text-sm py-2 pl-5 md:px-8 min-h-[288px]">
                   <h2 className="text-sm md:text-base font-semibold mb-5">
                     {tab.title}:
                   </h2>
-                  {tab.bullets.map((bullet) => (
-                    <p
-                      key={`tab-content-${tab.name}-point-${bullet.id}`}
-                      className="mt-2 flex text-sm md:text-base"
-                    >
+                  <List
+                    spacing="xs"
+                    size="sm"
+                    icon={
                       <IconTriangle
                         size={10}
-                        strokeWidth={3}
-                        className="stroke-zinc-900 dark:stroke-zinc-100 rotate-90 mr-2 mt-[6px]"
+                        className="stroke-none fill-gray-800 dark:fill-gray-200 rotate-90 mt-[6px]"
                       />
-
-                      {bullet.text}
-                    </p>
-                  ))}
+                    }
+                  >
+                    {tab.bullets.map((bullet) => (
+                      <List.Item
+                        key={`tab-content-${tab.name}-point-${bullet.id}`}
+                      >
+                        {bullet.text}
+                      </List.Item>
+                    ))}
+                  </List>
                   <div className="mt-7 grid md:grid-cols-2 lg:grid-cols-3">
                     {tab.icons.map((icon) => (
                       <div

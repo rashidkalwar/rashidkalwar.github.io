@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 
-function OnScrollFadeIn({ children, delay = 0.4, className = '' }) {
+function OnScrollFadeIn({
+  children,
+  delay = 0.4,
+  className = '',
+  amount = 0.8,
+}) {
   return (
     <motion.div
       className={className}
@@ -11,7 +16,7 @@ function OnScrollFadeIn({ children, delay = 0.4, className = '' }) {
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.5, delay: delay, ease: 'easeIn' }}
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: amount }}
     >
       {children}
     </motion.div>

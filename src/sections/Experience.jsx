@@ -1,4 +1,9 @@
-import { Container, Timeline, useMantineColorScheme } from '@mantine/core';
+import {
+  Container,
+  Timeline,
+  useMantineColorScheme,
+  List,
+} from '@mantine/core';
 import Link from 'next/link';
 import {
   IconBrowser,
@@ -11,11 +16,11 @@ import OnScrollFadeIn from '../components/OnScrollFadeIn';
 
 const Bullet = ({ children }) => {
   return (
-    <span className="mt-2 flex text-sm">
+    <span className="mt-1 flex text-sm">
       <IconTriangle
         size={12}
         strokeWidth={3}
-        className="stroke-none fill-zinc-900 dark:fill-zinc-100 rotate-90 mr-2 mt-[4px]"
+        className="stroke-none fill-zinc-900 dark:fill-zinc-100 rotate-90 mr-2 mt-1"
       />
 
       {children}
@@ -26,7 +31,7 @@ const Bullet = ({ children }) => {
 function Experience() {
   const { colorScheme } = useMantineColorScheme();
   return (
-    <OnScrollFadeIn delay={0.2}>
+    <OnScrollFadeIn delay={0.2} amount={0.5}>
       <Container>
         <div className="relative flex items-center my-4 px-5 md:px-0 mx-auto max-w-3xl mb-10">
           <span className="mr-4 text-lg font-semibold font-mono">
@@ -52,25 +57,29 @@ function Experience() {
                   Dec 2022 - Mar 2023
                 </span>
               </div>
-
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
+              <List
+                spacing="xs"
+                size="sm"
+                icon={
+                  <IconTriangle
+                    size={8}
+                    className="stroke-none fill-gray-800 dark:fill-gray-200 rotate-90 mt-[6px]"
+                  />
+                }
+              >
+                <List.Item>
+                  Designed and developed a personal portfolio website using
+                  React (Next.js) to showcase my skills and experience.
+                </List.Item>
+                <List.Item>
+                  Implemented a responsive and clean design with optimized
+                  performance for a seamless user experience
+                </List.Item>
+                <List.Item>
+                  Implemented a responsive and clean design with optimized
+                  performance for a seamless user experience
+                </List.Item>
+              </List>
             </div>
           </Timeline.Item>
           <Timeline.Item
@@ -99,25 +108,33 @@ function Experience() {
                   Dec 2021 - Aug 2022
                 </span>
               </div>
-
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
+              <List
+                spacing="xs"
+                size="sm"
+                icon={
+                  <IconTriangle
+                    size={8}
+                    className="stroke-none fill-gray-800 dark:fill-gray-200 rotate-90 mt-[6px]"
+                  />
+                }
+              >
+                <List.Item>
+                  Developed proficiency in Python programming and data
+                  engineering through freelance work with an Australian prop
+                  tech startup, collecting and organizing data from multiple
+                  sources using web APIs and web scraping.
+                </List.Item>
+                <List.Item>
+                  Applied data cleaning and cross-checking procedures to ensure
+                  accuracy and improve the quality of data sets used by the
+                  company.
+                </List.Item>
+                <List.Item>
+                  Created comprehensive data frames and Excel files to
+                  facilitate the analysis and interpretation of large volumes of
+                  data.
+                </List.Item>
+              </List>
             </div>
           </Timeline.Item>
           <Timeline.Item
@@ -137,24 +154,27 @@ function Experience() {
                 </span>
               </div>
 
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
-              <Bullet>
-                <span>
-                  Designed and developed a responsive personal portfolio website
-                  using HTML, CSS, and JavaScript.
-                </span>
-              </Bullet>
+              <List
+                spacing="xs"
+                size="sm"
+                icon={
+                  <IconTriangle
+                    size={8}
+                    className="stroke-none fill-gray-800 dark:fill-gray-200 rotate-90 mt-[6px]"
+                  />
+                }
+              >
+                <List.Item>
+                  Wrote tech articles that broke down complex web development
+                  problems in a clear and easy-to-understand way, demonstrating
+                  my expertise in both technology and writing.
+                </List.Item>
+                <List.Item>
+                  Showed off my creative side by crafting articles that appealed
+                  to a wide range of readers, including non-technical audiences,
+                  proving that tech can be fun and accessible for everyone.
+                </List.Item>
+              </List>
             </div>
           </Timeline.Item>
         </Timeline>

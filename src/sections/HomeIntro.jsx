@@ -21,14 +21,10 @@ const Intro = () => {
           initial={{ opacity: 0, scale: 0.9, y: -10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-3"
+          className="mt-2 text-base"
         >
-          I am a Software Developer specializing in developing digital
-          experiences that make people&apos;s lives <br />
-          <strong className="font-logo text-3xl font-normal tracking-wide">
-            simple
-          </strong>
-          :)
+          I am a Software Developer with a passion for developing digital
+          experiences that make people&apos;s lives simple :)
         </motion.p>
       </div>
 

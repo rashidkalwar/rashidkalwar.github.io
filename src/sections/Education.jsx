@@ -78,7 +78,7 @@ function Education() {
                 >
                   Google/Coursera
                 </Link>{' '}
-                Data Analytics training for entry-level role.
+                Data Analytics training program.
               </span>
               <span className="text-sm text-zinc-500">September 2021</span>
             </div>

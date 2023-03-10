@@ -15,16 +15,16 @@ export default function Home() {
       </Head>
       <Navbar />
       <main>
-        <section id="home" className="pt-28 min-h-screen">
+        <section id="home" className="pt-24 min-h-screen">
           <Intro />
         </section>
         <section id="portfolio" className="mx-auto pt-16">
           <Skills />
         </section>
-        <section className="mb-28">
+        <section className="mb-24">
           <Education />
         </section>
-        <section className="mb-28">
+        <section className="mb-24">
           <Experience />
         </section>
       </main>
