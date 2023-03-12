@@ -11,7 +11,7 @@ function SectionTitle({ text }) {
         transition={{ duration: 0.8, delay: 0.2 }}
       ></motion.div>
       <motion.span
-        className="mx-4 flex-shrink text-4xl font-logo font-medium"
+        className="mx-4 flex-shrink text-2xl font-mono font-semibold"
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.8 }}

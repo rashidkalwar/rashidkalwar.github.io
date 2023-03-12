@@ -53,8 +53,8 @@ const Intro = () => {
             <p className="font-logo text-xl lg:text-2xl text-slate-600 dark:text-slate-300 tracking-wider">
               Contact
             </p>
-            <p className="mt-1 text-sm lg:text-base font-medium tracking-tight overflow-clip">
-              Email@email.com
+            <p className="mt-1 text-sm lg:text-ase font-medium tracking-tight overflow-x-auto">
+              rashidkalwar1456@gmail.com
               <br />
               +92 342 1456345
             </p>

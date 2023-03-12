@@ -3,6 +3,7 @@ import {
   Timeline,
   useMantineColorScheme,
   List,
+  Badge,
 } from '@mantine/core';
 import Link from 'next/link';
 import {
@@ -13,20 +14,6 @@ import {
 } from '@tabler/icons';
 
 import OnScrollFadeIn from '../components/OnScrollFadeIn';
-
-const Bullet = ({ children }) => {
-  return (
-    <span className="mt-1 flex text-sm">
-      <IconTriangle
-        size={12}
-        strokeWidth={3}
-        className="stroke-none fill-zinc-900 dark:fill-zinc-100 rotate-90 mr-2 mt-1"
-      />
-
-      {children}
-    </span>
-  );
-};
 
 function Experience() {
   const { colorScheme } = useMantineColorScheme();
@@ -52,7 +39,9 @@ function Experience() {
           >
             <div className="flex flex-col text-zinc-800 dark:text-zinc-300 ml-5">
               <div className="flex justify-between items-center">
-                <span className="font-medium">Personal Portfolio Website</span>
+                <span className="font-semibold">
+                  Personal Portfolio Website
+                </span>
                 <span className="text-sm text-zinc-500">
                   Dec 2022 - Mar 2023
                 </span>
@@ -80,6 +69,20 @@ function Experience() {
                   GitHub pages for accessibility
                 </List.Item>
               </List>
+              <div className="mt-1 space-x-1">
+                <Badge color="dark" variant="dot">
+                  Javascript
+                </Badge>
+                <Badge color="dark" variant="dot">
+                  Next.js (React)
+                </Badge>
+                <Badge color="dark" variant="dot">
+                  TailwindCSS
+                </Badge>
+                <Badge color="dark" variant="dot">
+                  Mantine
+                </Badge>
+              </div>
             </div>
           </Timeline.Item>
           <Timeline.Item
@@ -88,7 +91,7 @@ function Experience() {
           >
             <div className="flex flex-col text-zinc-800 dark:text-zinc-300 ml-5">
               <div className="flex justify-between items-center">
-                <span className="font-medium">
+                <span className="font-semibold">
                   Data Engineer (
                   <Link
                     className="hover:underline"
@@ -134,6 +137,20 @@ function Experience() {
                   data.
                 </List.Item>
               </List>
+              <div className="mt-1 space-x-1">
+                <Badge color="dark" variant="dot">
+                  Python
+                </Badge>
+                <Badge color="dark" variant="dot">
+                  Pandas
+                </Badge>
+                <Badge color="dark" variant="dot">
+                  Selenium
+                </Badge>
+                <Badge color="dark" variant="dot">
+                  Rest apis
+                </Badge>
+              </div>
             </div>
           </Timeline.Item>
           <Timeline.Item
@@ -144,7 +161,7 @@ function Experience() {
               <div className="flex justify-between items-center">
                 <Link
                   href="https://dev.to/rashidalikalwar"
-                  className="font-medium hover:underline"
+                  className="font-semibold hover:underline"
                 >
                   Tech Blogger
                 </Link>

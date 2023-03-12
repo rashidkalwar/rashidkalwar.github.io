@@ -40,7 +40,7 @@ function Testimonials() {
     <OnScrollFadeIn delay={0.2}>
       <Container>
         <div className="flex justify-center mt-10">
-          <span className="text-lg font-mono font-semibold text-center">
+          <span className="text-xl font-mono font-semibold text-center">
             Testimonials
           </span>
         </div>
@@ -51,7 +51,7 @@ function Testimonials() {
           plugins={[autoplay.current]}
           onMouseEnter={autoplay.current.stop}
           onMouseLeave={autoplay.current.reset}
-          height={400}
+          height={300}
           slideSize="100%"
           controlSize={40}
           slideGap="md"
