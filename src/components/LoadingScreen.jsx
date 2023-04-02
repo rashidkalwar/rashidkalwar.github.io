@@ -9,6 +9,12 @@ function LoadingScreen() {
           className="stroke-zinc-800 dark:stroke-zinc-100 h-[80px] md:h-[200px] stroke-[40px] mb-5"
           viewBox="-13 -13 1980 819.078"
           fill="none"
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
         >
           <motion.path
             id="1"

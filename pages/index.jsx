@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
 import Navbar from '../src/components/Navbar';
 import Intro from '../src/sections/HomeIntro';
@@ -8,6 +7,7 @@ import Education from '../src/sections/Education';
 import Experience from '../src/sections/Experience';
 import Testimonials from '../src/sections/Testimonials';
 import Contact from '../src/sections/Contact';
+import Footer from '../src/components/Footer';
 
 export default function Home() {
   return (
@@ -35,14 +35,7 @@ export default function Home() {
         </section>
       </main>
       <footer>
-        <div className="flex justify-center items-center py-5">
-          <Link
-            href="https://github.com/rashidkalwar"
-            className="font-mono text-center text-xs md:text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300"
-          >
-            Designed &amp; Developed by Rashid Ali
-          </Link>
-        </div>
+        <Footer />
       </footer>
     </>
   );

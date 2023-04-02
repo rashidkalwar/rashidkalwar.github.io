@@ -18,7 +18,6 @@ export default function App(props) {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    // setLoading(false);
     setTimeout(() => setLoading(false), 2100);
   }, []);
 
