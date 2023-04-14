@@ -15,7 +15,7 @@ export default function Home() {
       <Head></Head>
       <Navbar />
       <main>
-        <section id="home" className="pt-24 min-h-[700px]">
+        <section id="home" className="pt-24 min-h-[700px] mb-20">
           <Intro />
         </section>
         <section id="portfolio" className="mx-auto pt-16">
@@ -27,7 +27,7 @@ export default function Home() {
         <section className="mb-24">
           <Experience />
         </section>
-        <section className="mb-24">
+        <section className="my-32">
           <Testimonials />
         </section>
         <section id="contact" className="mb-24">
