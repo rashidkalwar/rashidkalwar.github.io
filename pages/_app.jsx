@@ -41,6 +41,7 @@ export default function App(props) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+      <meta name="google-site-verification" content="i_WG8slZM9qGqg0E6l0NQFJOzzsexjaGj9Z__C17CB0" />
       </Head>
 
       <ColorSchemeProvider
