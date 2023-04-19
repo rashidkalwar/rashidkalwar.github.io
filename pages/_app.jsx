@@ -38,10 +38,44 @@ export default function App(props) {
           content="Rashid Ali is a software developer who specializes in building exceptional digital experiences that make people's life simple."
         />
         <meta
+          property="image"
+          content="https://rashidkalwar.github.io/og.png"
+        />
+        <link
+          rel="sitemap"
+          type="application/xml"
+          href="/sitemap/sitemap-index.xml"
+        />
+        <meta property="og:title" content="Rashid Ali" />
+        <meta
+          property="og:description"
+          content="Rashid Ali is a software developer who specializes in building exceptional digital experiences that make people's life simple."
+        />
+        <meta
+          property="og:image"
+          content="https://rashidkalwar.github.io/og.png"
+        />
+        <meta property="og:url" content="https://rashidkalwar.github.io/" />
+        <meta property="og:type" content="website" />
+        <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-      <meta name="google-site-verification" content="i_WG8slZM9qGqg0E6l0NQFJOzzsexjaGj9Z__C17CB0" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@RashidAliKalwar" />
+        <meta property="twitter:title" content="Rashid Ali" />
+        <meta
+          property="twitter:description"
+          content="Rashid Ali is a software developer who specializes in building exceptional digital experiences that make people's life simple."
+        />
+        <meta
+          property="twitter:image"
+          content="https://rashidkalwar.github.io/og.png"
+        />
+        <meta
+          name="google-site-verification"
+          content="i_WG8slZM9qGqg0E6l0NQFJOzzsexjaGj9Z__C17CB0"
+        />
       </Head>
 
       <ColorSchemeProvider
