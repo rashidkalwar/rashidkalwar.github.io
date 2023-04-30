@@ -45,7 +45,7 @@ function Contact() {
             </Button>
             <Button
               component="a"
-              href="/resume.pdf"
+              href="/Rashid_Ali_Software_Developer_Resume.pdf"
               target="_blank"
               variant="light"
               color={colorScheme === 'dark' ? 'gray' : 'dark'}
